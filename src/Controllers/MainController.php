@@ -1,6 +1,12 @@
 <?php
 namespace App\Controllers ;
 
-class MainController {
-	
+use App\Core\Controller;
+
+class MainController extends Controller {
+   
+public function main() {
+ $this->view->renderHtml('main/main.php');
 }
+
+}//
