@@ -15,7 +15,9 @@ abstract class Controller {
 		$this->format = new Format();
 		$this->data = $this->format->xss($_REQUEST);
 		$this->view = new View(__DIR__ . '/../../templates');
-
+         
+		$this->view->set('content', $this->getContent());
+		$this->view->set('title', $this->title ?? null);
 		$this->view->renderHtml('main_index.php');
 	}
  abstract protected function getContent();
