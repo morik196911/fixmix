@@ -20,5 +20,6 @@ abstract class Controller {
 		$this->view->set('title', $this->title ?? null);
 		$this->view->renderHtml('main_index.php');
 	}
+
  abstract protected function getContent();
 }

@@ -12,7 +12,7 @@ class MainController extends Controller {
    
 public function getContent() {
 
-  return '/main/main.php';
+  return "/main/main.php";
 }
 
 
